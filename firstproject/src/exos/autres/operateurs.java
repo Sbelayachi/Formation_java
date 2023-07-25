@@ -1,4 +1,4 @@
-package demos;
+package exos.autres;
 
 public class operateurs {
     public static void main(String[] args) {
