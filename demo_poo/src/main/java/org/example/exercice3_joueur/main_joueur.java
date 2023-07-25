@@ -7,9 +7,9 @@ public class main_joueur {
         System.out.println(joueur1);
         int i = 1;
 
-        for(i<20)
+        for(1=0,i<20,i=i+1)
         {
-            i=i+1;
+            ;
 
 
 
