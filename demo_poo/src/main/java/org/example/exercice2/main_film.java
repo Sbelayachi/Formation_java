@@ -1,4 +1,6 @@
-package Exercice2_film;
+package org.example.exercice2;
+
+import org.example.exercice2.Exo2_film;
 
 public class main_film {
     public static void main(String[] args) {

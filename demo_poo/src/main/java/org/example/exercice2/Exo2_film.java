@@ -4,7 +4,7 @@
 //3.//Ajouter un constructeur, des getters et des setters pour ces attributs, ainsi qu'une méthode pour afficher les informations sur le film
 
 
-package Exercice2_film;
+package org.example.exercice2;
 
 public class Exo2_film {
     private String titre, realisateur, annee_sortie, genre;
