@@ -12,9 +12,8 @@ public class exo3_joueur {
     private String nom;
     private int niveau, points;
 
-    public String getNom() {
-        return nom;
-    }
+    public String getNom()
+    {return nom;}
 
 
 
@@ -47,16 +46,17 @@ public class exo3_joueur {
         this.nom = nom;
         this.niveau = niveau;
         this.points = points;
+    }
 
 // 4.Créer une méthode effectuerUneQuete() qui ajoute 10 points d'expérienceau joueur
 
-        public void Quete(int num) {
+        public void Quete() {
             this.points += 10;
             System.out.println(this.points + "effectue la quete !" + points);
         }
 //5.//Créer qu'une méthode qui augmente le niveau du joueur de +1 si sonexpérience dépasse 100 points et réinitialise son expérience
 
-        public void Quete(int num) {
+        public void levelUP() {
             if (this.points >= 100) {
                 this.niveau++;
                 System.out.println("Votre " + this.niveau + " !");
@@ -66,7 +66,6 @@ public class exo3_joueur {
 
 
 
-    }
     @Override
     public String toString() {
         return "exo3_joueur{" +
