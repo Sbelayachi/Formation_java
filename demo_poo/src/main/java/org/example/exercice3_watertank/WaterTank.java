@@ -11,7 +11,7 @@ package org.example.exercice3_watertank;
 public class WaterTank {
 
     private double poids, capacite, niveau;
-    private static double volume_total;
+    public static double volume_total=0;
 
 
 // Constructeur
@@ -22,57 +22,63 @@ public class WaterTank {
         this.poids = poids;
         this.capacite = capacite;
         this.niveau = niveau;
+        WaterTank.volume_total += niveau;
 
     }
 
 //3. Créer une méthode remplir() qui ajoutera une volume d'eau à la citerne
 
     public void remplir(double volume) {
+        if(capacite + this.niveau<= capacite){
         this.niveau += volume;
-        //System.out.println("après remplissage le volume d'eau de la citerne est " + niveau);
+        WaterTank.volume_total += niveau;}
     }
+
 
     //4. créer une méthode vider() qui enlèvera un volume d'eau à la citerne
     public void vider(double volume) {
-        this.niveau += volume;
-        //System.out.println("après la medode 'vider' le volume d'eau de la citerne est " + niveau);
+        if (capacite < this.niveau) {
+            this.niveau -= volume;
+            WaterTank.volume_total -= niveau;
+
+            //System.out.println("après la medode 'vider' le volume d'eau de la citerne est " + niveau);
+        }
     }
+// getter pour le poids total
+        public double poidsTotal = poids + niveau;
 
 
+        //getter et setter
 
-    //getter et setter
 
+        public double getPoids;
 
-    public double getPoids() {
-        return poids;
+        public void setPoids (double poids){
+            this.poids = poids;
+        }
+
+        public double getCapacite () {
+            return capacite;
+        }
+
+        public void setCapacite ( double capacite){
+            this.capacite = capacite;
+        }
+
+        public double getNiveau () {
+            return niveau;
+        }
+
+        public void setNiveau ( double niveau){
+            this.niveau = niveau;
+        }
+
+        @Override
+        public String toString () {
+            return "WaterTank{" +
+                    "poids=" + poids +
+                    ", capacite=" + capacite +
+                    ", niveau=" + niveau +
+                    '}';
+        }
     }
-
-    public void setPoids(double poids) {
-        this.poids = poids;
-    }
-
-    public double getCapacite() {
-        return capacite;
-    }
-
-    public void setCapacite(double capacite) {
-        this.capacite = capacite;
-    }
-
-    public double getNiveau() {
-        return niveau;
-    }
-
-    public void setNiveau(double niveau) {
-        this.niveau = niveau;
-    }
-
-    @Override
-    public String toString() {
-        return "WaterTank{" +
-                "poids=" + poids +
-                ", capacite=" + capacite +
-                ", niveau=" + niveau +
-                '}';
-    }
-}
