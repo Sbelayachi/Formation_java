@@ -1,8 +1,6 @@
 package org.example.exercice3_watertank;
 
-import org.example.demo_statique.Maison;
-
-public class Application_WaterTank {
+public class MainWaterTank {
 
     public static void main(String[] args) {
 

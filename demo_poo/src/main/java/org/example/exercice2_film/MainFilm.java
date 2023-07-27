@@ -1,6 +1,6 @@
 package org.example.exercice2_film;
 
-public class main_film {
+public class MainFilm {
     public static void main(String[] args) {
         System.out.println();
         Exo2_film filmLahaine = new Exo2_film(" 'la Haine' ","Mathieu Kassovitz","1995-05-31","'Drame'");

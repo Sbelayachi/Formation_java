@@ -1,6 +1,6 @@
 package org.example.exercice4_plante;
 
-public class Main_plante {
+public class MainPlante {
     public static void main(String[] args) {
         Plantes plantes = new Plantes("pommier",1.68,"vert");
         plantes.afficher();

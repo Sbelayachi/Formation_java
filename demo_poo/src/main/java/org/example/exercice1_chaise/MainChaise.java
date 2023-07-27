@@ -1,6 +1,6 @@
 package org.example.exercice1_chaise;
 
-public class main_chaise {
+public class MainChaise {
 
 
     public static void main (String[] args) {
