@@ -6,7 +6,7 @@
 //5.//Créer qu'une méthode qui augmente le niveau du joueur de +1 si sonexpérience dépasse 100 points et réinitialise son expérience
 //6.//Tester le programme
 
-package org.example.exercice3_joueur;
+package org.example.exercice3Joueur;
 
 public class exo3_joueur {
     private String nom;

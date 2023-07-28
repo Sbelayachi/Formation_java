@@ -8,7 +8,7 @@
 
 
 
-package org.example.exercice4_plante;
+package org.example.exercicePlante;
 
 public class Plantes {// 1.Créer une classe "Plante" avec les attributs suivants : nom, hauteur et couleur des feuilles
     private String nom;

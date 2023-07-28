@@ -1,4 +1,4 @@
-package org.example.exercice3_joueur;
+package org.example.exercice3Joueur;
 
 public class main_joueur {
     public static void main(String[] args) {

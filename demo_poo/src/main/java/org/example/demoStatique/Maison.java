@@ -1,4 +1,4 @@
-package org.example.demo_statique;
+package org.example.demoStatique;
 
 public class Maison {
     private String couleur;

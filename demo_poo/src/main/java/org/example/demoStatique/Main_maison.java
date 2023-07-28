@@ -1,4 +1,4 @@
-package org.example.demo_statique;
+package org.example.demoStatique;
 
 public class Main_maison {
     public static void main(String[] args) {

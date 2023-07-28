@@ -19,16 +19,14 @@ public class Livre {
     private String titre;
     private String auteur;
     private int nombrePage;
-
     private boolean estEmprunte;
 
-
-    // Constucteur
+// Constucteur
     public Livre(String titre, String auteur, int nombrePage, boolean estEmprunte) {
         this.titre = titre;
         this.auteur = auteur;
         this.nombrePage = nombrePage;
-        this.estEmprunte = estEmprunte;
+        this.estEmprunte = false;
     }
 
     // Setter et getter
@@ -67,17 +65,23 @@ public class Livre {
 
     }
 
-//Créer une méthode pour afficher les informations sur le livre et une autre pour changer l'état d'emprunt
+//Créer une méthode pour afficher les informations sur le livre
 
     @Override
     public String toString() {
         return "Livre{" +
-                "titre='" + titre + '\'' +
-                ", auteur='" + auteur + '\'' +
-                ", nombrePage=" + nombrePage +
-                ", estEmprunte=" + estEmprunte +
-                '}';
+                "titre ='" + titre + '\'' +
+                ", auteur ='" + auteur + '\'' +
+                ", nombrePag e=" + nombrePage +
+                ", estEmprunte =" + estEmprunte +
+                '.';}
+
+ //Créer une méthode pour changer l'état d'emprunt
+
+  public void changeStatus() {
+        this.estEmprunte = !this.estEmprunte; // ! devant un booléen donne son opposé
+
     }
-    }
+}
 
 

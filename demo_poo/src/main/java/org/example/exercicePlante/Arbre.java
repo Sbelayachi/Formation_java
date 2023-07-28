@@ -1,4 +1,4 @@
-package org.example.exercice4_plante;
+package org.example.exercicePlante;
 
 public class Arbre extends Plantes {
     public Arbre(String nom, Double hauteur, String couleur) {

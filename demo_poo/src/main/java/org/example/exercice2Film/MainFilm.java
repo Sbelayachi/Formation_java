@@ -1,4 +1,4 @@
-package org.example.exercice2_film;
+package org.example.exercice2Film;
 
 public class MainFilm {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package org.example.exercice4_plante;
+package org.example.exercicePlante;
 
 public class MainPlante {
     public static void main(String[] args) {
