@@ -52,7 +52,6 @@ public abstract class CompteBancaireDAO extends BaseDAO<CompteBancaire> {
         return nbRow ==1;    }
 
 // supprimer un compte
-
    @Override
     public boolean delete(CompteBancaire element) throws SQLException {
 
@@ -62,7 +61,6 @@ public abstract class CompteBancaireDAO extends BaseDAO<CompteBancaire> {
        int nbRow = statement.executeUpdate();
        return nbRow ==1;
    }
-
 
 
 // Afficher une liste de compte
@@ -76,13 +74,14 @@ public abstract class CompteBancaireDAO extends BaseDAO<CompteBancaire> {
 
         while(resultSet.next()){
             CompteBancaire compteBancaire = new CompteBancaire(resultSet.getInt("id"),
-                    resultSet.getInt("id_compte"),
-                    resultSet.getDouble("sold");
-                    resultSet.getObject("customer");
-                    resultSet.getArray("liste_compte");
+                    resultSet.getDouble("solde"),
+                    resultSet.getObject("customer"));
+                    resultSet.getArray("liste_operation");
                     result.add(compteBancaire);
         }
         return result;
+    }
+
     }
 
 
@@ -102,4 +101,3 @@ public abstract class CompteBancaireDAO extends BaseDAO<CompteBancaire> {
 
 
 
-}

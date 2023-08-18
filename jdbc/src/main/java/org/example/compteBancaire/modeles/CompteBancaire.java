@@ -12,11 +12,10 @@ public class CompteBancaire {
 
 // Constructeur
 
-    public CompteBancaire(int idCompte, double solde, Client client, List<String> operations) {
-        this.idCompte = idCompte;
+    public CompteBancaire(double solde, double client, Object operations) {
         this.solde = solde;
         this.client = client;
-        this.operations = operations;
+        this.operations = new ArrayList<>();
     }
 
 

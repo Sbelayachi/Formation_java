@@ -2,7 +2,7 @@ package org.example.compteBancaire.modeles;
 
 public class Operation {
 
-
+private int idOperation;
     private int numero;
     private double montant;
     private Statut statut;
