@@ -1,6 +1,6 @@
-package org.example.DAO;
+package org.example.exerciceTODOLIST.DAO;
 
-import org.example.entity.TodoList;
+import org.example.exerciceTODOLIST.DAO.entity.TodoList;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

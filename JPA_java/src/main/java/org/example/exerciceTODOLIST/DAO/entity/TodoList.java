@@ -1,4 +1,4 @@
-package org.example.entity;
+package org.example.exerciceTODOLIST.DAO.entity;
 
 import javax.persistence.*;
 
