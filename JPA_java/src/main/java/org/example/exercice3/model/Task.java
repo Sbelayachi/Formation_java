@@ -19,7 +19,7 @@ public class Task {
 
     @ManyToOne
     @JoinColumn(name="user_ID", nullable = false)
-    private User utilisateur;
+    private User user;
 
 
 

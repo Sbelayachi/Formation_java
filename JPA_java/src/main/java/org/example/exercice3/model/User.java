@@ -15,22 +15,24 @@ import java.util.List;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-
-
-
     private int id;
 
     @Column(name = "user_name")
 
     private String name;
 
-    @OneToMany(mappedBy = "user",cascade = {CascadeType.ALL})
+    @OneToMany(mappedBy = "user",cascade = {CascadeType.ALL},orphanRemoval = true)
     private List<Task> tasks;
 
 
 
     // Constructeur VIDE
 
+    public User() {
+    }
+
+
+    // Constructeur avec le nom
 
     public User(String userName) {
     }

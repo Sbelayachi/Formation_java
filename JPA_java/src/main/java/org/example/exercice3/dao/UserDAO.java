@@ -9,12 +9,11 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import java.util.List;
 
-public class UserDAO implements TaskDAO<User> {
+public interface UserDAO  {
 
-    private final EntityManagerFactory emf;
 
     public UserDAO(EntityManagerFactory entityManagerFactory) {
-        emf = entityManagerFactory;
+        this.entityManagerFactory=entityManagerFactory;
     }
 
     @Override
