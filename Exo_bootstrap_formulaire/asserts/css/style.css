@@ -1,0 +1,15 @@
+
+
+
+
+.form-label {
+    text-align: left;
+    vertical-align: middle;
+  }
+  .form-input {
+    width: 300px;
+    margin-left: 10px;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
