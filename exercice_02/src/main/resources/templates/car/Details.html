@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Car details</title>
+
+</head>
+<body>
+<main>
+    <h1>Car Details</h1>
+    <hr>
+    <p>
+        ${brand}
+    </p>
+    <ul>
+        <li><b>Brand : </b><span th:text="${brand}"></span></li>
+        <li><b>Color: </b><span th:text="${color}"></span></li>
+        <li><b>HorsePower : </b><span th:text="${horsePower}"></span></li>
+        <li><b>Type: </b><span th:text="${type}"></span></li>
+    </ul>
+
+    <!-- <ul th:unless="${persons.isEmpty()}"> -->
+    <ul th:if="${!casrs.isEmpty()}">
+
+        <li th:each="p: ${cars}"><span th:text="${p}"></span></li>
+    </ul>
+
+    <p th:if="${cars.isEmpty()}">
+        There is no person here!
+    </p>
+</main>
+</body>
+</html>
