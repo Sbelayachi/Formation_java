@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+
+<head>
+<!--    Insérer/ajouter le fragment : lien  des librairies Bootstrap présentes dans la page Home (utilisation des fragments Thymeleaf) -->
+    <meta charset="UTF-8">
+    <title th:text="${(mode.equals('details') ? 'View' : 'Add') + ' a Car'}"></title>
+    <span th:replace="~{home :: bootstrapImports}"></span>
+</head>
+
+
+
+<body>
+
+<!--    Insérer/ajouter le fragment : barre de naviguation présente dans la page Home (utilisation des fragments Thymeleaf) -->
+<header th:insert="~{home :: nav}"></header>
+<main class="container">
+
+    <h1 th:text="${(mode.equals('details') ? 'View' : 'Add') + ' a Car'}">
+    </h1>
+    <hr>
+
+    <form action="#" th:action="@{/cars/add}" method="post" th:object="${car}">
+        <input type="text" class="d-none" th:field="*{id}" readonly>
+
+        <div class="mb-3">
+            <label for="brand" class="form-label">Brand:</label>
+            <input type="text" id="brand" class="form-control" th:field="*{brand}" th:readonly="${mode.equals('details')}" th:required="${mode.equals('add')}">
+        </div>
+
+        <div class="mb-3">
+            <label for="color" class="form-label">Color:</label>
+            <input type="text" id="color" class="form-control" th:field="*{color}" th:readonly="${mode.equals('details')}" th:required="${mode.equals('add')}">
+        </div>
+
+
+        <div class="mb-3">
+            <label for="horsePower" class="form-label">Horse_Power:</label>
+            <input type="number" min="50" max="1500" id="horsePower" class="form-control" th:field="*{horsePower}" th:readonly="${mode.equals('details')}" th:required="${mode.equals('add')}">
+        </div>
+
+
+        <div class="mb-3">
+            <label for="type" class="form-label">Type:</label>
+            <input type="text" id="type" class="form-control" th:field="*{type}" th:readonly="${mode.equals('details')}" th:required="${mode.equals('add')}">
+        </div>
+
+
+
+        <div class="text-end">
+            <a th:if="${mode.equals('details')}" class="btn btn-secondary" th:href="@{/cars}"><i class="bi bi-arrow-counterclockwise"></i> Return</a>
+            <button th:unless="${mode.equals('details')}" class="btn btn-success"><i class="bi bi-plus-circle"></i> Add a Car</button>
+        </div>
+
+    </form>
+</main>
+</body>
+</html>

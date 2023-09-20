@@ -5,11 +5,7 @@ import com.example.exercice_02.models.CarDTO;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
-
+import java.util.*;
 
 
 // Attributs d'une voiture : id, brand, color, horsePower, type
@@ -62,11 +58,22 @@ public class CarService {
     }
 
 
+
     public List<CarDTO> getCars() {
         return cars.values().stream().toList();
     }
 
-    public CarDTO getCarById(UUID id) {
-        return cars.values().stream().filter(d -> d.getId().equals(id)).findFirst().orElse(null);
+    public Optional<CarDTO> getCarById(UUID id) {
+        return cars.values().stream().filter(d -> d.getId().equals(id)).findFirst();
+    }
+
+    public CarDTO addCar(CarDTO carData) {
+        if (carData.getId() == null) {
+            carData.setId(UUID.randomUUID());
+        }
+
+        cars.put(carData.getId(), carData);
+
+        return carData;
     }
 }

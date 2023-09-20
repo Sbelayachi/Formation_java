@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>CARS List</title>
+    <span th:replace="~{home :: bootstrapImports}"></span>
+</head>
+
+
+
+<body>
+<header th:insert="~{home :: nav.blabla}">
+
+</header>
+<main class="container">
+    <h1 class="fw-light">Car List</h1>
+    <hr>
+
+    <table th:if="${!cars.isEmpty()}" class="rounded overflow-hidden table table-dark table-striped text-center align-middle">
+
+        <thead>
+        <tr>
+            <th>Brand</th>
+            <th>Color</th>
+            <th>HorsePower</th>
+            <th>Type</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+
+
+        <tbody>
+        <tr th:each="d : ${cars}">
+            <td th:text="${d.brand}"></td>
+            <td th:text="${d.color}"></td>
+            <td th:text="${d.horsePower}"></td>
+            <td th:text="${d.type}"></td>
+
+            <td>
+        <!--  http://localhost:8080/dogs/xxxxxxxxxx -->
+                <a th:href="@{/cars/{carId}(carId=${d.id})}" class="btn btn-outline-info"><i class="bi bi-eye"></i> Details</a>
+            </td>
+        </tr>
+        </tbody>
+
+
+    </table>
+    <p th:if="${cars.isEmpty()}"> = SORRY No CAR in the database yet! = </p>
+    <hr>
+    <div class="text-end">
+        <a th:href="@{/cars/add}" class="btn btn-success"><i class="bi bi-plus-circle"></i> Add a Car</a>
+    </div>
+</main>
+</body>
+</html>
